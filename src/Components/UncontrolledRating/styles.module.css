@@ -1,0 +1,10 @@
+.ratingContainer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ratingButton {
+    all:unset;
+    cursor: pointer;
+}

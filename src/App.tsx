@@ -1,10 +1,9 @@
 import React from "react";
 import "./App.module.css";
-import { Accordion } from "./Components/Accordion/Accordion";
-import { Rating } from "./Components/Rating/Rating";
-import { AppTitle } from "./Components/AppTitle";
 import { OnOff } from "./Components/OnOff/OnOff";
 import s from "./App.module.css";
+import { UncontrolledAccordion } from "./Components/UncontrolledAccordion/Accordion";
+import { UncontrolledRating } from "./Components/UncontrolledRating/Rating";
 
 function App() {
   return (
@@ -17,6 +16,9 @@ function App() {
       <div className={s.style}>
         <OnOff />
       </div>
+      <UncontrolledAccordion title={"Menu"} />
+      <UncontrolledAccordion title={"News"} />
+      <UncontrolledRating />
     </div>
   );
 }
