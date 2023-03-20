@@ -8,7 +8,7 @@ import { Button } from "./Button";
 // };
 export type ActiveType = boolean | undefined;
 
-export function OnOff() {
+export function OnOffUncontroled() {
   const [isActive, setIsActive] = useState<ActiveType>(undefined);
 
   const handleOnButtonClicked = () => {

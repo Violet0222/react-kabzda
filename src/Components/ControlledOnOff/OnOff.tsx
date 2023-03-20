@@ -1,11 +1,11 @@
 import { Light } from "./Light";
 import s from "./OnOff.module.css";
-import { useState } from "react";
 import { Button } from "./Button";
 
+export type OnOffType = boolean;
 type OnPropsType = {
   value: boolean;
-  onChange: () => void;
+  onChange: (value: boolean) => void;
 };
 // export type ButtonChangeType = {
 //   handleClick: () => void;
@@ -14,10 +14,10 @@ export type ActiveType = boolean | undefined;
 
 export function ControlledOnOff(props: OnPropsType) {
   const handleOnButtonClicked = () => {
-    props.onChange();
+    props.onChange(true);
   };
   const handleOffButtonClicked = () => {
-    props.onChange();
+    props.onChange(false);
   };
 
   return (

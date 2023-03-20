@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "./App.module.css";
-import { OnOff } from "./Components/UncontrolledOnOff/OnOff";
+import { OnOffUncontroled } from "./Components/UncontrolledOnOff/OnOff";
 import s from "./App.module.css";
 import { UncontrolledAccordion } from "./Components/UncontrolledAccordion/Accordion";
 import { UncontrolledRating } from "./Components/UncontrolledRating/Rating";
 import { ControledAccordion } from "./Components/Accordion/Accordion";
-import { ControlledOnOff } from "./Components/ControlledOnOff/OnOff";
+import { ControlledOnOff, OnOffType } from "./Components/ControlledOnOff/OnOff";
+import { Rating, RatingValueType } from "./Components/Rating/Rating";
 
 function App() {
+  let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
   let [accordionState, setAccordionStare] = useState(false);
-  let [on, setOn] = useState(true);
+  let [switchOn, setSwitchOn] = useState<OnOffType>(false);
   return (
     <div>
       {/*<AppTitle title={"This APP"} />*/}
@@ -21,16 +23,11 @@ function App() {
           setAccordionStare(!accordionState);
         }}
       />
-      <ControlledOnOff
-        value={on}
-        onChange={() => {
-          setOn(!on);
-        }}
-      />
+      <ControlledOnOff value={switchOn} onChange={(On) => setSwitchOn(On)} />
       {/*<Accordion title={"News"} collapsed={false} />*/}
-      {/*<Rating value={3} />*/}
+      <Rating value={ratingValue} onClick={setRatingValue} />
       <div className={s.style}>
-        <OnOff />
+        <OnOffUncontroled />
       </div>
       <UncontrolledAccordion title={"Menu"} />
       <UncontrolledAccordion title={"News"} />
