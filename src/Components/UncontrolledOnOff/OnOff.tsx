@@ -2,13 +2,17 @@ import { Light } from "./Light";
 import s from "./OnOff.module.css";
 import { useState } from "react";
 import { Button } from "./Button";
+import { ItemType } from "../Accordion/Accordion";
 
 // export type ButtonChangeType = {
 //   handleClick: () => void;
 // };
 export type ActiveType = boolean | undefined;
 
-export function OnOffUncontroled() {
+type PropsType = {
+  onChange: () => void;
+};
+export function OnOffUncontroled(props: PropsType) {
   const [isActive, setIsActive] = useState<ActiveType>(undefined);
 
   const handleOnButtonClicked = () => {

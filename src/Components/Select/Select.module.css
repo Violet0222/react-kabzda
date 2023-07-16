@@ -1,0 +1,13 @@
+.select span.main{
+border: solid black 1px;
+    display:inline-block;
+}
+.items{
+    position:absolute;
+    padding:2px;
+    border: solid black 1px;
+}
+.item.selected{
+    background: #1ea7fd;
+    color: white;
+}
