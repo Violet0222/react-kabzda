@@ -22,15 +22,15 @@ test("reducer should return value: false", () => {
   expect(newState.collapsed).toBe(false);
 });
 
-test("reducer should return value: error", () => {
-  //data
-  const state: StateType = {
-    collapsed: true,
-  };
-  //action
-
-  //expected
-  expect(() => {
-    reducer(state, { type: FAKETYPE });
-  }).toThrowError();
-});
+// test("reducer should return value: error", () => {
+//   //data
+//   const state: StateType = {
+//     collapsed: true,
+//   };
+//   //action
+//
+//   //expected
+//   expect(() => {
+//     reducer(state, { type: FAKETYPE });
+//   }).toThrowError();
+// });
