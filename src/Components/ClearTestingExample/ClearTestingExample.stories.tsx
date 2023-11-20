@@ -17,5 +17,5 @@ export const ClearTestingExample = () => {
       window.removeEventListener("keypress", keyPressHandler);
     };
   }, []);
-  return <div>Typed text: {text}</div>;
+  return <div>Typed text: you are typing {text}</div>;
 };
